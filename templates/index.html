@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Price Predictor</title>
+</head>
+<body>
+    <h1>Car Price Predictor</h1>
+    <form method="POST" action="/predict">
+        <div>
+            <label for="model_year">Model Year:</label>
+            <input type="number" name="model_year" id="model_year" required 
+                   min="1990" max="2024" step="1" value="2020">
+        </div>
+        <br>
+        <div>
+            <label for="milage">Milage:</label>
+            <input type="number" name="milage" id="milage" required 
+                   min="0" max="500000" step="1" value="50000">
+        </div>
+        <br>
+        <div>
+            <label for="brand">Brand:</label>
+            <select name="brand" id="brand" required>
+                <option value="brand_Alfa">Alfa</option>
+                <option value="brand_Aston">Aston</option>
+                <option value="brand_Audi">Audi</option>
+                <!-- Add more brands as needed -->
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="accident">Accident:</label>
+            <select name="accident" id="accident" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="clean_title">Clean Title:</label>
+            <select name="clean_title" id="clean_title" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit">Predict Price</button>
+    </form>
+</body>
+</html> 

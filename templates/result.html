@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Predicted Car Price</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% else %}
+        <p>For a {{ year }} car with {{ milage }} miles:</p>
+        <p>The predicted price is: <strong>{{ prediction }}</strong></p>
+    {% endif %}
+    <br>
+    <a href="/">Make another prediction</a>
+</body>
+</html> 
